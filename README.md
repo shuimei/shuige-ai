@@ -32,6 +32,22 @@
 
 **没有任何外部资源请求** —— 不加载 Google Fonts、不加载 CDN 脚本、技术栈标签是纯文字。目标客户在大陆，任何境外静态资源都可能拖慢甚至阻塞首屏。字体走系统字体栈（含 PingFang SC / 微软雅黑 / Noto Sans CJK 回退）。
 
+### 构建可复现性：为什么用 `source(none)`
+
+```css
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../en/index.html";
+```
+
+Tailwind v4 的自动源探测**不会被 `@source` 取代，而是叠加**。它默认扫描项目里所有未被 gitignore 的文件——包括 `assets/app.js`、`scripts/*.mjs`、`README.md`、`package.json`。这些文件里的偶然字符串会被当作候选类名。
+
+实测过的后果：仅修改 `app.js` 的注释措辞，生成的 CSS 就变了（多出 `--tw-rotate-*` / `--tw-skew-*` 等惰性初始值，+768 字节）。这会让本地构建与 CI 构建产出不一致、也让人无法信任 diff。
+
+`source(none)` 关掉自动探测后，CSS 只由上面两个文件决定。已实测：在 `app.js` 里塞入伪类名后重建，CSS 哈希不变。
+
+> 改完样式请跑 `npm run build` 并提交源码；CI 用同一份 `package-lock.json` 执行 `npm ci`，产物应当逐字节一致。
+
 ## 目录结构
 
 ```

@@ -1,9 +1,12 @@
-@import "tailwindcss";
+/* `source(none)` disables Tailwind v4's automatic content detection, which would
+   otherwise run *in addition to* the @source entries below and scan every file
+   in the project that is not gitignored — app.js, scripts/*.mjs, README.md,
+   package.json. Incidental strings in those files are treated as candidate class
+   names, so editing prose or JS style silently changes the generated CSS.
+   Declaring the sources explicitly keeps the build reproducible. */
+@import "tailwindcss" source(none);
 
-/* Sources are declared explicitly. Tailwind v4's automatic detection depends on
-   the working directory and on .gitignore heuristics, which makes the CI build
-   fragile — the CI working directory is not the one a developer builds in.
-   The 404 page is deliberately absent: it is self-contained and uses no classes. */
+/* The 404 page is deliberately absent: it is self-contained and uses no classes. */
 @source "../index.html";
 @source "../en/index.html";
 
