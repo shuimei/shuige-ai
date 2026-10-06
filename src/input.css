@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Sources are declared explicitly. Tailwind v4's automatic detection depends on
+   the working directory and on .gitignore heuristics, which makes the CI build
+   fragile — the CI working directory is not the one a developer builds in.
+   The 404 page is deliberately absent: it is self-contained and uses no classes. */
+@source "../index.html";
+@source "../en/index.html";
+
+@theme {
+  /* Brand violet, taken from the purple-to-red gradient on the WeChat card. */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+  --color-brand-950: #2e1065;
+
+  /* WeChat's own green, so the contact CTA reads as "add me on WeChat". */
+  --color-wechat: #07c160;
+
+  /* System fonts only, deliberately. Google Fonts is unreachable for mainland
+     visitors, and a webfont request would block first paint for exactly the
+     audience this page is aimed at. The CJK fallbacks are ordered so Windows,
+     macOS and Android each land on a sane Chinese face. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
+    "Source Han Sans SC", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* The sticky header would otherwise cover whatever an in-page link targets. */
+  :target {
+    scroll-margin-top: 5.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

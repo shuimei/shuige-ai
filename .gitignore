@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build output — GitHub Actions rebuilds this on every deploy.
+dist/
+
+# Local npm cache used so installs work inside a sandboxed shell.
+.npm-cache/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shuige AI — Data Pipelines, Enterprise RAG & AI Agent Development</title>
+<meta name="description" content="Independent engineer building data collection and cleaning pipelines, enterprise knowledge bases, AI application integrations, AI agents and custom machine learning models. Full source handover.">
+<link rel="canonical" href="https://shuimei.github.io/shuige-ai/en/">
+<link rel="alternate" hreflang="zh-CN" href="https://shuimei.github.io/shuige-ai/">
+<link rel="alternate" hreflang="en" href="https://shuimei.github.io/shuige-ai/en/">
+<link rel="alternate" hreflang="x-default" href="https://shuimei.github.io/shuige-ai/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/main.css">
+<meta name="theme-color" content="#7c3aed">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shuige AI — Turn your data into AI systems that actually work">
+<meta property="og:description" content="Data pipelines · Enterprise RAG · AI agents · Custom models. Full source handover, no outsourcing.">
+<meta property="og:url" content="https://shuimei.github.io/shuige-ai/en/">
+</head>
+
+<body class="bg-white font-sans text-slate-700 antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+    <a href="../" class="flex items-center gap-2.5">
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">水</span>
+      <span class="font-semibold tracking-tight text-slate-900">Shuige AI</span>
+    </a>
+    <nav class="flex items-center gap-0.5 text-sm" aria-label="Page navigation">
+      <a href="#services" class="hidden rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 sm:block">Services</a>
+      <a href="#work" class="hidden rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 sm:block">Open source</a>
+      <a href="#faq" class="hidden rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 sm:block">FAQ</a>
+      <a href="../" lang="zh-CN" hreflang="zh-CN" class="rounded-lg px-3 py-2 font-medium text-brand-700 transition hover:bg-brand-50">中文</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="relative overflow-hidden border-b border-slate-200/80">
+    <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-5 pb-16 pt-14 sm:pb-24 sm:pt-20">
+      <p class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+        Independent engineer · You talk to the person who writes the code
+      </p>
+
+      <h1 class="mt-6 max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+        Turn your data into<br class="hidden sm:block"> <span class="text-brand-600">AI systems that ship</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+        Data collection and cleaning, enterprise knowledge bases, AI agents, custom models.
+        From picking the stack to handing over something running in production —
+        <span class="font-semibold text-slate-900">no account managers, no subcontracting</span>.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">
+          Talk about your project
+        </a>
+        <a href="#work" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50">
+          See my open source
+        </a>
+      </div>
+
+      <dl class="mt-14 grid max-w-3xl gap-x-8 gap-y-6 sm:grid-cols-3">
+        <div>
+          <dt class="font-semibold text-slate-900">You keep the source</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-slate-600">Everything lands in your own repository. No black boxes, no licence you rent forever.</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-slate-900">Milestone by milestone</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-slate-600">You see something runnable at each stage, not one big reveal at the end.</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-slate-900">One layer of contact</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-slate-600">The person you brief is the person who builds it. Nothing is passed down.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-200/80 bg-slate-50/70">
+    <div class="mx-auto max-w-6xl px-5 py-6">
+      <p class="text-center text-xs font-medium uppercase tracking-wider text-slate-500">Typical stack</p>
+      <ul class="mt-4 flex flex-wrap justify-center gap-x-2.5 gap-y-2 text-sm">
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Python</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Scrapy</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Playwright</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">FastAPI</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PostgreSQL</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Elasticsearch</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">LangChain</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">RAG</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Vector DB</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PyTorch</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Docker</li>
+        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Vue</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-200/80">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">You have probably hit one of these</h2>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">Knowledge walks out the door</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Docs are scattered across drives, wikis and chat history. Every new hire asks the same questions, and when someone leaves, the answers leave with them.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">The model is only as good as the data</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Scanned PDFs, spreadsheets and free text in a dozen formats. Feed that to an LLM and it answers confidently and incorrectly.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">The data you need is not accessible</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Someone copies and pastes for days, it breaks the moment the source changes, and next month it all has to be done again by hand.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">Nobody can maintain what was delivered</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">No docs, no tests, no explanation of the design. Changing one line means tracking down whoever wrote it. It starts rotting the day it goes live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="border-b border-slate-200/80 bg-slate-50/70">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">What I can do for you</h2>
+      <p class="mt-4 max-w-2xl text-slate-600">Each engagement states what you actually receive, not just a capability label.</p>
+
+      <div class="mt-10 grid gap-5 lg:grid-cols-2">
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">Data collection and cleaning</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Turn data trapped in websites, apps and files into a structured table you can actually analyse.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Deliverables</p>
+          <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Re-runnable scrapers (auth, pagination, anti-bot handling)</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Scheduling and retry</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Field-level cleaning and deduplication rules</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Database loading or Excel / CSV export</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">Enterprise knowledge base</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Turn internal documents, policies and hard-won experience into something you can simply ask.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Deliverables</p>
+          <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Multi-format parsing, chunking and ingestion</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Retrieval-augmented answering with source citations</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>A Q&amp;A interface you can embed in existing tools</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Incremental indexing as documents are added</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">AI application integration</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Bring an LLM into the systems you already run, instead of replacing them to get AI.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Deliverables</p>
+          <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Integration with your existing services and databases</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Prompt design plus an evaluation set</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Cost tracking and rate limiting</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Graceful degradation and logging</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">AI agent development</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Agents that call your own tools and APIs to finish multi-step work on their own.</p>
+          <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Deliverables</p>
+          <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Task orchestration and multi-turn tool calling</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Hooks into internal APIs, databases and business systems</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Auditable logs of what the agent did and why</li>
+            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Human confirmation on high-stakes steps</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
+          <h3 class="text-lg font-semibold text-slate-900">Custom machine learning models</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">When a general-purpose model is not good enough, train one on your own data.</p>
+          <div class="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Deliverables</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Labelling plan and quality checks</li>
+                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Training pipeline and an evaluation report</li>
+                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Inference service and API</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Good fit when</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>The task is classification, extraction or matching with labelled data</li>
+                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>Latency, cost or data-residency rules rule out a hosted API</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="border-b border-slate-200/80">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Open source I have written</h2>
+      <p class="mt-4 max-w-2xl text-slate-600">
+        The source is on GitHub — open it and read it. Rather than a wall of client logos, here is something you can verify: I wrote this, and it still runs.
+      </p>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2">
+
+        <a href="https://github.com/shuimei/CanCong-WebSpider" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">CanCong-WebSpider</h3>
+            <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Python</span>
+          </div>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+            A crawling system built on Scrapy + Selenium: JavaScript-rendered pages, keyword filtering and content cleaning, concurrent multi-process fetching, a web monitoring dashboard, and automatic HTML-to-Markdown conversion.
+          </p>
+          <p class="mt-3 text-xs text-slate-500">5 stars · public repo →</p>
+        </a>
+
+        <a href="https://github.com/shuimei/douban-movie-crawler" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">douban-movie-crawler</h3>
+            <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Jupyter</span>
+          </div>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+            Scraping and tidying movie listings, including field parsing and a first pass at analysis.
+          </p>
+          <p class="mt-3 text-xs text-slate-500">2 stars · public repo →</p>
+        </a>
+
+        <a href="https://github.com/shuimei/DianpingGeo" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">DianpingGeo</h3>
+            <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Python / Flask</span>
+          </div>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+            A full data path in one project: scrape geo-tagged listings, load them into a database, then present them on an interactive WebGIS site built with Flask.
+          </p>
+          <p class="mt-3 text-xs text-slate-500">public repo →</p>
+        </a>
+
+        <a href="https://github.com/shuimei/CanCong-Toys" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">CanCong-Toys</h3>
+            <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Vue</span>
+          </div>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+            A collection of small utilities, with the front end written in Vue.
+          </p>
+          <p class="mt-3 text-xs text-slate-500">public repo →</p>
+        </a>
+
+      </div>
+
+      <p class="mt-6 text-sm text-slate-500">
+        More on
+        <a href="https://github.com/shuimei" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600">github.com/shuimei</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-200/80 bg-slate-50/70">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">What you get at handover</h2>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">The full source</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Committed to a repository you own. You never have to ask me for access.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">Deployment notes</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Dependencies and steps, so it can be stood up again on another machine.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">Design rationale</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Why the key decisions were made, and where to change things later.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="font-semibold text-slate-900">A walkthrough</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">A live session to hand the system to you or your team, questions included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-200/80">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">How we work together</h2>
+      <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <li>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">1</span>
+          <p class="mt-3 font-semibold text-slate-900">Describe the problem</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">No requirements document needed. Just explain what is going wrong.</p>
+        </li>
+        <li>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">2</span>
+          <p class="mt-3 font-semibold text-slate-900">Scope and quote</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">I assess feasibility, effort and risk — including what I would advise against.</p>
+        </li>
+        <li>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">3</span>
+          <p class="mt-3 font-semibold text-slate-900">Build in milestones</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Something runnable at every stage, so direction can change early.</p>
+        </li>
+        <li>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">4</span>
+          <p class="mt-3 font-semibold text-slate-900">Handover</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Source, docs and deployment notes delivered together, then walked through.</p>
+        </li>
+        <li>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">5</span>
+          <p class="mt-3 font-semibold text-slate-900">Support afterwards</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">I stay available until your side can run it without me.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq" class="border-b border-slate-200/80 bg-slate-50/70">
+    <div class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Common questions</h2>
+      <div class="mt-10 space-y-8">
+
+        <div>
+          <h3 class="font-semibold text-slate-900">How is pricing structured?</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">A fixed price for the whole project, split across milestones. Small, well-defined jobs such as a scraper can be quoted outright. If the requirements are still exploratory, we start with a short paid spike and decide on the rest afterwards.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900">How long does it take?</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">Data collection is usually 1–2 weeks. Knowledge bases and AI integrations are usually 3–6 weeks. Model training depends on data volume and labelling cost. You get a concrete schedule once we have talked through the scope.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900">I only have a vague idea — is that enough to start?</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">Yes, and that is how most projects begin. Half an hour is usually enough to turn it into a scope that can be built and accepted, and then we decide whether to go ahead.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900">Can you take over a half-finished project?</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">Yes, but I read the code first and give you an assessment: what can be kept, what I would rewrite, and where the risks are. You decide what happens next after reading it.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900">How is data kept secure?</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">Your data can stay on your own servers or inside your network — I work from anonymised samples. I am happy to sign an NDA, and where data residency rules apply, the model can be deployed on your own hardware.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900">What happens after delivery?</h3>
+          <p class="mt-2 leading-relaxed text-slate-600">You get the source, deployment notes and design docs, plus a walkthrough. I stay available for questions for an agreed period written into the contract — I do not disappear the day it ships.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="border-b border-slate-200/80">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Let's talk about your project</h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            Scan the WeChat code and tell me what you are trying to build.<br>
+            I will tell you first whether it is worth doing — then we can talk about how.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-slate-600">
+            <li class="flex gap-2"><span class="text-wechat" aria-hidden="true">✓</span>No requirements document needed up front</li>
+            <li class="flex gap-2"><span class="text-wechat" aria-hidden="true">✓</span>If it is not a good fit, I will say so</li>
+            <li class="flex gap-2"><span class="text-wechat" aria-hidden="true">✓</span>The first conversation is free</li>
+          </ul>
+          <p class="mt-6 text-sm text-slate-500">
+            WeChat is the fastest way to reach me. If you would rather use email or a call, say so in the message.
+          </p>
+        </div>
+
+        <div class="flex justify-center lg:justify-end">
+          <figure class="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+            <img src="../assets/wechat-qr.png" width="640" height="640" alt="WeChat QR code for Shuige AI"
+                 class="h-56 w-56 rounded-xl" loading="lazy" decoding="async">
+            <figcaption class="mt-4 max-w-[14rem] text-sm leading-relaxed text-slate-600">
+              <span class="font-semibold text-slate-900">Scan to add on WeChat</span><br>
+              On a phone, long-press the image and choose "Recognise QR code"
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-slate-900 text-slate-400">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center gap-2.5">
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">水</span>
+      <span class="font-semibold text-white">Shuige AI</span>
+    </div>
+    <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm" aria-label="Footer navigation">
+      <a href="https://github.com/shuimei" class="transition hover:text-white">GitHub</a>
+      <a href="#services" class="transition hover:text-white">Services</a>
+      <a href="#faq" class="transition hover:text-white">FAQ</a>
+      <a href="../" lang="zh-CN" hreflang="zh-CN" class="transition hover:text-white">中文</a>
+    </nav>
+  </div>
+  <div class="border-t border-slate-800">
+    <p class="mx-auto max-w-6xl px-5 py-5 text-xs text-slate-500">© 2026 Shuige AI</p>
+  </div>
+</footer>
+
+</body>
+</html>

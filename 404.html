@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>页面不存在 — 水哥 AI</title>
+<meta name="robots" content="noindex">
+<!-- GitHub Pages serves this file for any unmatched path, at any depth, so every
+     asset reference here would resolve differently per URL. It is therefore
+     self-contained: styles are inlined and links are resolved at runtime by the
+     tiny script at the bottom, which keeps the page working whether it is hosted
+     under /shuige-ai/ or at a domain root. -->
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 1.25rem;
+    background: #f8fafc; color: #334155; text-align: center; line-height: 1.6;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 28rem; }
+  .code { font-size: 3.75rem; font-weight: 700; letter-spacing: -0.02em; color: #7c3aed; }
+  h1 { margin: 1rem 0 0; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; color: #0f172a; }
+  p { margin: 0.75rem 0 0; color: #475569; }
+  .actions { margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  a { text-decoration: none; }
+  .btn { display: inline-block; border-radius: 0.75rem; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 600; }
+  .btn-primary { background: #7c3aed; color: #fff; }
+  .btn-primary:hover { background: #6d28d9; }
+  .btn-ghost { background: #fff; color: #1e293b; border: 1px solid #cbd5e1; }
+  .btn-ghost:hover { background: #f1f5f9; }
+  .lang { margin-top: 2rem; font-size: 0.875rem; color: #64748b; }
+  .lang a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<main>
+  <p class="code">404</p>
+  <h1>这个页面不存在</h1>
+  <p>链接可能已经失效，或者地址输错了。</p>
+  <div class="actions">
+    <a class="btn btn-primary" data-home href="/">回到首页</a>
+    <a class="btn btn-ghost" data-contact href="/">联系我</a>
+  </div>
+  <p class="lang">
+    <a data-home href="/">English version</a>
+  </p>
+</main>
+
+<script>
+  // Derive the site root from wherever this 404 was served, so the links work both
+  // at https://user.github.io/repo/ and at a custom domain root.
+  (function () {
+    var path = location.pathname;
+    var home = path.replace(/[^/]*$/, '');
+    // GitHub Pages can serve 404.html from nested paths; walk up to the repo root
+    // by anchoring on the first path segment when it is not a known page.
+    var root = '/' + (path.split('/')[1] || '') + '/';
+    if (root === '//') root = '/';
+    var zh = document.querySelector('[data-home]');
+    var en = document.querySelector('.lang a');
+    if (zh) zh.setAttribute('href', root);
+    if (en) {
+      en.setAttribute('href', root + 'en/');
+      en.setAttribute('lang', 'en');
+      en.setAttribute('hreflang', 'en');
+    }
+    var contact = document.querySelector('[data-contact]');
+    if (contact) contact.setAttribute('href', root + '#contact');
+  })();
+</script>
+
+</body>
+</html>
