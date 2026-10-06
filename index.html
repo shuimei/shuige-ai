@@ -11,21 +11,32 @@
 <link rel="alternate" hreflang="x-default" href="https://shuimei.github.io/shuige-ai/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/main.css">
-<meta name="theme-color" content="#7c3aed">
+<meta name="theme-color" content="#2563eb">
 <meta property="og:type" content="website">
 <meta property="og:title" content="水哥 AI — 把你的数据，变成会干活的 AI 系统">
 <meta property="og:description" content="数据采集与清洗 · 企业知识库 · AI Agent 开发 · 模型定制。源码全交付，独立开发，不转包。">
 <meta property="og:url" content="https://shuimei.github.io/shuige-ai/">
+<!-- Marks the document as script-capable before first paint, which is what gates
+     the scroll-reveal styling. Without JS the class never lands and every
+     section renders fully visible. The timeout is a self-heal: if app.js never
+     initialises — blocked, truncated, parse error — the class is dropped and the
+     page reveals everything instead of leaving sections stuck at opacity 0. -->
+<script>
+  document.documentElement.classList.add('js');
+  setTimeout(function () {
+    if (!window.__revealReady) document.documentElement.classList.remove('js');
+  }, 2500);
+</script>
 </head>
 
 <body class="bg-white font-sans text-slate-700 antialiased">
 
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white">跳到主要内容</a>
 
-<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+<header data-header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md">
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
     <a href="./" class="flex items-center gap-2.5">
-      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">水</span>
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white shadow-sm">水</span>
       <span class="font-semibold tracking-tight text-slate-900">水哥 AI</span>
     </a>
     <nav class="flex items-center gap-0.5 text-sm" aria-label="页面导航">
@@ -41,15 +52,20 @@
 
   <!-- Hero: the one screen that decides whether a visitor stays. -->
   <section class="relative overflow-hidden border-b border-slate-200/80">
-    <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl" aria-hidden="true"></div>
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="grid-field" aria-hidden="true"></div>
+
     <div class="relative mx-auto max-w-6xl px-5 pb-16 pt-14 sm:pb-24 sm:pt-20">
-      <p class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700">
-        <span class="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true"></span>
+      <p class="inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-white/70 px-3 py-1 text-xs font-medium text-brand-700 backdrop-blur">
+        <span class="relative flex h-1.5 w-1.5" aria-hidden="true">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-400 opacity-75"></span>
+          <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-500"></span>
+        </span>
         独立开发者 · 直接对接 · 不转包
       </p>
 
       <h1 class="mt-6 max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-        把你的数据，<br class="hidden sm:block">变成会干活的 <span class="text-brand-600">AI 系统</span>
+        把你的数据，<br class="hidden sm:block">变成会干活的 <span class="text-gradient">AI 系统</span>
       </h1>
 
       <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
@@ -58,15 +74,15 @@
       </p>
 
       <div class="mt-8 flex flex-wrap items-center gap-3">
-        <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">
+        <a href="#contact" class="btn-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">
           加微信聊需求
         </a>
-        <a href="#work" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50">
+        <a href="#work" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white/80 px-6 py-3.5 text-base font-semibold text-slate-800 backdrop-blur transition hover:border-brand-300 hover:bg-white hover:text-brand-700">
           看我开源的项目
         </a>
       </div>
 
-      <dl class="mt-14 grid max-w-3xl gap-x-8 gap-y-6 sm:grid-cols-3">
+      <dl class="reveal mt-14 grid max-w-3xl gap-x-8 gap-y-6 sm:grid-cols-3">
         <div>
           <dt class="font-semibold text-slate-900">源码全交付</dt>
           <dd class="mt-1 text-sm leading-relaxed text-slate-600">项目结束，代码进你自己的仓库。没有黑盒，没有年费锁死。</dd>
@@ -83,46 +99,63 @@
     </div>
   </section>
 
-  <!-- Tech strip. Text badges only: no third-party logo requests, so nothing
-       here can stall the page for a visitor inside mainland China. -->
-  <section class="border-b border-slate-200/80 bg-slate-50/70">
-    <div class="mx-auto max-w-6xl px-5 py-6">
-      <p class="text-center text-xs font-medium uppercase tracking-wider text-slate-500">常用技术栈</p>
-      <ul class="mt-4 flex flex-wrap justify-center gap-x-2.5 gap-y-2 text-sm">
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Python</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Scrapy</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Playwright</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">FastAPI</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PostgreSQL</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Elasticsearch</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">LangChain</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">RAG</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">向量数据库</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PyTorch</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Docker</li>
-        <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Vue</li>
-      </ul>
+  <!-- Tech strip as an endless marquee. Text badges only: no third-party logo
+       requests, so nothing here can stall the page for a visitor inside
+       mainland China. The list is duplicated once so the -50% loop is seamless. -->
+  <section class="border-b border-slate-200/80 bg-slate-50/70 py-7">
+    <p class="text-center text-xs font-medium uppercase tracking-[0.18em] text-slate-500">常用技术栈</p>
+    <div class="marquee mt-4">
+      <div class="marquee-track">
+        <ul class="flex shrink-0 items-center gap-2.5 pr-2.5 text-sm">
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Python</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Scrapy</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Playwright</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">FastAPI</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PostgreSQL</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Elasticsearch</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">LangChain</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">RAG</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">向量数据库</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PyTorch</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Docker</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Vue</li>
+        </ul>
+        <ul class="flex shrink-0 items-center gap-2.5 pr-2.5 text-sm" aria-hidden="true">
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Python</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Scrapy</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Playwright</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">FastAPI</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PostgreSQL</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Elasticsearch</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">LangChain</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">RAG</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">向量数据库</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">PyTorch</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Docker</li>
+          <li class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700">Vue</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Problem framing: name the visitor's situation before naming the service. -->
   <section class="border-b border-slate-200/80">
     <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">你大概遇到过这些情况</h2>
+      <h2 class="reveal text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">你大概遇到过这些情况</h2>
       <div class="mt-10 grid gap-5 sm:grid-cols-2">
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:0ms">
           <p class="font-semibold text-slate-900">文档散在各处，知识留不住</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">资料分散在网盘、Confluence、聊天记录里。新人问一遍，老员工答一遍，人一走经验就没了。</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:80ms">
           <p class="font-semibold text-slate-900">想用大模型，但数据太脏</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">PDF、扫描件、表格混在一起，格式各不相同。直接喂进去，回答得一本正经但完全不对。</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:160ms">
           <p class="font-semibold text-slate-900">需要的数据拿不到，只能手工搬</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">几个人复制粘贴好几天，容易出错，而且下次数据更新还要再来一遍。</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:240ms">
           <p class="font-semibold text-slate-900">外包交付完，没人能接手维护</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">代码没有文档，改一行都要回头找原作者。项目上线那天，就是它开始腐烂的那天。</p>
         </div>
@@ -131,78 +164,79 @@
   </section>
 
   <!-- Services: each card states the deliverable, not just the capability. -->
-  <section id="services" class="border-b border-slate-200/80 bg-slate-50/70">
-    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">我能帮你做什么</h2>
-      <p class="mt-4 max-w-2xl text-slate-600">每一项都写清楚了你会拿到什么，而不是只给一个能力名词。</p>
+  <section id="services" class="relative overflow-hidden border-b border-slate-200/80 bg-slate-50/70">
+    <div class="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-accent-200/40 blur-3xl" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <h2 class="reveal text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">我能帮你做什么</h2>
+      <p class="reveal mt-4 max-w-2xl text-slate-600" style="--reveal-delay:60ms">每一项都写清楚了你会拿到什么，而不是只给一个能力名词。</p>
 
       <div class="mt-10 grid gap-5 lg:grid-cols-2">
 
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 class="text-lg font-semibold text-slate-900">数据采集与清洗</h3>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">把散落在网页、App、文件里的数据，变成能直接分析的结构化表。</p>
           <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">交付内容</p>
           <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>可重跑的采集程序（含登录、翻页、反爬处理）</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>定时调度与失败重试</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>字段清洗与去重规则</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>落库或导出 Excel / CSV 的脚本</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>可重跑的采集程序（含登录、翻页、反爬处理）</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>定时调度与失败重试</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>字段清洗与去重规则</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>落库或导出 Excel / CSV 的脚本</li>
           </ul>
         </article>
 
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" style="--reveal-delay:80ms">
           <h3 class="text-lg font-semibold text-slate-900">企业知识库搭建</h3>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">让公司内部的文档、制度、历史经验，变成一个能直接问答的知识库。</p>
           <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">交付内容</p>
           <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>多格式文档解析与切分入库</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>检索增强问答（RAG），带原文出处</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>可嵌入现有系统的问答界面</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>增量更新机制，新增文档自动进库</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>多格式文档解析与切分入库</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>检索增强问答（RAG），带原文出处</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>可嵌入现有系统的问答界面</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>增量更新机制，新增文档自动进库</li>
           </ul>
         </article>
 
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 class="text-lg font-semibold text-slate-900">AI 应用集成</h3>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">把大模型接进你现有的系统，而不是让你为了用 AI 换一套系统。</p>
           <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">交付内容</p>
           <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>与现有业务系统 / 数据库的对接</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>提示词设计与效果评测集</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>调用成本与限流控制</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>失败降级与日志</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>与现有业务系统 / 数据库的对接</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>提示词设计与效果评测集</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>调用成本与限流控制</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>失败降级与日志</li>
           </ul>
         </article>
 
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <article class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" style="--reveal-delay:80ms">
           <h3 class="text-lg font-semibold text-slate-900">AI Agent 应用开发</h3>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">让 AI 能调用你自己的工具和接口，把多步骤的任务自己跑完。</p>
           <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">交付内容</p>
           <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>任务编排与多轮工具调用</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>内部 API / 数据库 / 业务系统接入</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>执行过程可追溯的日志</li>
-            <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>关键步骤人工确认与兜底</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>任务编排与多轮工具调用</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>内部 API / 数据库 / 业务系统接入</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>执行过程可追溯的日志</li>
+            <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>关键步骤人工确认与兜底</li>
           </ul>
         </article>
 
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
+        <article class="reveal lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
           <h3 class="text-lg font-semibold text-slate-900">机器学习模型</h3>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">通用模型不够用时，用你自己的数据训练一个真正贴合业务的模型。</p>
           <div class="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2">
             <div>
               <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">交付内容</p>
               <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
-                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>数据标注方案与质量校验</li>
-                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>训练流程与评估报告</li>
-                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>推理服务部署与调用接口</li>
+                <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>数据标注方案与质量校验</li>
+                <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>训练流程与评估报告</li>
+                <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>推理服务部署与调用接口</li>
               </ul>
             </div>
             <div>
               <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">适合的场景</p>
               <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
-                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>分类、抽取、匹配等有明确标注数据的任务</li>
-                <li class="flex gap-2"><span class="text-brand-500" aria-hidden="true">·</span>对延迟、成本或数据出境有硬性要求的场景</li>
+                <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>分类、抽取、匹配等有明确标注数据的任务</li>
+                <li class="flex gap-2"><span class="text-accent-500" aria-hidden="true">·</span>对延迟、成本或数据出境有硬性要求的场景</li>
               </ul>
             </div>
           </div>
@@ -216,16 +250,16 @@
        or testimonials — the visitor can verify every claim on this page. -->
   <section id="work" class="border-b border-slate-200/80">
     <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">我写过的开源项目</h2>
-      <p class="mt-4 max-w-2xl text-slate-600">
+      <h2 class="reveal text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">我写过的开源项目</h2>
+      <p class="reveal mt-4 max-w-2xl text-slate-600" style="--reveal-delay:60ms">
         源码都在 GitHub 上，可以直接点开看。比起一张客户 logo 墙，我更能保证的是：这些代码是我写的，而且现在还能跑。
       </p>
 
       <div class="mt-10 grid gap-4 sm:grid-cols-2">
 
-        <a href="https://github.com/shuimei/CanCong-WebSpider" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+        <a href="https://github.com/shuimei/CanCong-WebSpider" class="reveal lift group flex flex-col rounded-2xl border border-slate-200 bg-white p-5">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">CanCong-WebSpider</h3>
+            <h3 class="font-semibold text-slate-900 transition group-hover:text-brand-700">CanCong-WebSpider</h3>
             <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Python</span>
           </div>
           <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
@@ -234,9 +268,9 @@
           <p class="mt-3 text-xs text-slate-500">5 star · 公开仓库 →</p>
         </a>
 
-        <a href="https://github.com/shuimei/douban-movie-crawler" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+        <a href="https://github.com/shuimei/douban-movie-crawler" class="reveal lift group flex flex-col rounded-2xl border border-slate-200 bg-white p-5" style="--reveal-delay:80ms">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">douban-movie-crawler</h3>
+            <h3 class="font-semibold text-slate-900 transition group-hover:text-brand-700">douban-movie-crawler</h3>
             <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Jupyter</span>
           </div>
           <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
@@ -245,9 +279,9 @@
           <p class="mt-3 text-xs text-slate-500">2 star · 公开仓库 →</p>
         </a>
 
-        <a href="https://github.com/shuimei/DianpingGeo" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+        <a href="https://github.com/shuimei/DianpingGeo" class="reveal lift group flex flex-col rounded-2xl border border-slate-200 bg-white p-5">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">DianpingGeo</h3>
+            <h3 class="font-semibold text-slate-900 transition group-hover:text-brand-700">DianpingGeo</h3>
             <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Python / Flask</span>
           </div>
           <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
@@ -256,9 +290,9 @@
           <p class="mt-3 text-xs text-slate-500">公开仓库 →</p>
         </a>
 
-        <a href="https://github.com/shuimei/CanCong-Toys" class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-300 hover:shadow-md">
+        <a href="https://github.com/shuimei/CanCong-Toys" class="reveal lift group flex flex-col rounded-2xl border border-slate-200 bg-white p-5" style="--reveal-delay:80ms">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">CanCong-Toys</h3>
+            <h3 class="font-semibold text-slate-900 transition group-hover:text-brand-700">CanCong-Toys</h3>
             <span class="shrink-0 rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-600">Vue</span>
           </div>
           <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
@@ -271,7 +305,7 @@
 
       <p class="mt-6 text-sm text-slate-500">
         更多代码见
-        <a href="https://github.com/shuimei" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600">github.com/shuimei</a>。
+        <a href="https://github.com/shuimei" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 transition hover:decoration-accent-500">github.com/shuimei</a>。
       </p>
     </div>
   </section>
@@ -279,21 +313,21 @@
   <!-- Handover: answers the biggest unspoken objection about hiring one person. -->
   <section class="border-b border-slate-200/80 bg-slate-50/70">
     <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">项目结束时，你会拿到什么</h2>
+      <h2 class="reveal text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">项目结束时，你会拿到什么</h2>
       <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6">
           <p class="font-semibold text-slate-900">完整源码</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">提交到属于你的 Git 仓库，不需要向我申请任何权限。</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:80ms">
           <p class="font-semibold text-slate-900">部署说明</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">依赖清单和部署步骤，换一台机器也能照着跑起来。</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:160ms">
           <p class="font-semibold text-slate-900">设计说明</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">关键地方为什么这么写、以后要改该动哪里，都写清楚。</p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="reveal lift rounded-2xl border border-slate-200 bg-white p-6" style="--reveal-delay:240ms">
           <p class="font-semibold text-slate-900">一次线上讲解</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">把系统交到你或你团队手里，讲一遍，当面把疑问问完。</p>
         </div>
@@ -303,30 +337,30 @@
 
   <section class="border-b border-slate-200/80">
     <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">怎么合作</h2>
+      <h2 class="reveal text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">怎么合作</h2>
       <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-        <li>
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">1</span>
+        <li class="reveal">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white shadow-sm">1</span>
           <p class="mt-3 font-semibold text-slate-900">加微信说明问题</p>
           <p class="mt-1.5 text-sm leading-relaxed text-slate-600">不用先写需求文档，说清楚你想解决什么就行。</p>
         </li>
-        <li>
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">2</span>
+        <li class="reveal" style="--reveal-delay:80ms">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white shadow-sm">2</span>
           <p class="mt-3 font-semibold text-slate-900">我给方案与报价</p>
           <p class="mt-1.5 text-sm leading-relaxed text-slate-600">评估可行性、工作量和风险，说明哪些能做、哪些不建议做。</p>
         </li>
-        <li>
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">3</span>
+        <li class="reveal" style="--reveal-delay:160ms">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white shadow-sm">3</span>
           <p class="mt-3 font-semibold text-slate-900">按里程碑推进</p>
           <p class="mt-1.5 text-sm leading-relaxed text-slate-600">每个阶段都能看到能跑的东西，随时能提意见改方向。</p>
         </li>
-        <li>
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">4</span>
+        <li class="reveal" style="--reveal-delay:240ms">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white shadow-sm">4</span>
           <p class="mt-3 font-semibold text-slate-900">交付与讲解</p>
           <p class="mt-1.5 text-sm leading-relaxed text-slate-600">源码、文档、部署说明一次性交齐，并线上讲一遍。</p>
         </li>
-        <li>
-          <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">5</span>
+        <li class="reveal" style="--reveal-delay:320ms">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white shadow-sm">5</span>
           <p class="mt-3 font-semibold text-slate-900">上线后答疑</p>
           <p class="mt-1.5 text-sm leading-relaxed text-slate-600">后续问题继续跟，直到你这边能独立运转。</p>
         </li>
@@ -336,35 +370,35 @@
 
   <section id="faq" class="border-b border-slate-200/80 bg-slate-50/70">
     <div class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">常见问题</h2>
+      <h2 class="reveal text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">常见问题</h2>
       <div class="mt-10 space-y-8">
 
-        <div>
+        <div class="reveal">
           <h3 class="font-semibold text-slate-900">报价怎么算？</h3>
           <p class="mt-2 leading-relaxed text-slate-600">按项目整体报价，拆成若干里程碑分批支付。范围明确的小工具或数据采集，可以直接给固定价；需求还在探索阶段的，先做一轮短周期的验证，再决定后面的投入。</p>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="font-semibold text-slate-900">大概要多久？</h3>
           <p class="mt-2 leading-relaxed text-slate-600">数据采集类通常 1–2 周；知识库和 AI 应用集成通常 3–6 周；模型训练取决于数据量和标注成本。聊完需求后我会给具体排期。</p>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="font-semibold text-slate-900">我只有一个模糊的想法，能做吗？</h3>
           <p class="mt-2 leading-relaxed text-slate-600">可以，而且大多数项目都是这么开始的。先聊半小时，我帮你把想法收敛成一个能落地、能验收的范围，再谈做不做。</p>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="font-semibold text-slate-900">能接手别人写了一半的项目吗？</h3>
           <p class="mt-2 leading-relaxed text-slate-600">可以，但我会先读一遍代码并给你一份评估：哪些能继续用、哪些建议重写、风险在哪里。你看完评估再决定要不要往下走。</p>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="font-semibold text-slate-900">数据安全怎么保证？</h3>
           <p class="mt-2 leading-relaxed text-slate-600">数据可以只留在你自己的服务器或内网环境里，我只拿脱敏样本做开发。需要的话可以签保密协议；对数据出境有要求的场景，可以把模型部署在你自己的机器上。</p>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="font-semibold text-slate-900">项目做完之后呢？</h3>
           <p class="mt-2 leading-relaxed text-slate-600">交付源码、部署说明和设计文档，并做一次线上讲解。上线后的一段时间内我继续答疑，具体期限写进合同，不会交付完就消失。</p>
         </div>
@@ -375,10 +409,11 @@
 
   <!-- Contact: the QR is the primary CTA for a mainland audience, so it is shown
        inline rather than hidden behind a form or a modal. -->
-  <section id="contact" class="border-b border-slate-200/80">
-    <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+  <section id="contact" class="relative overflow-hidden border-b border-slate-200/80">
+    <div class="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-brand-200/40 blur-3xl" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-5 py-16 sm:py-20">
       <div class="grid items-center gap-10 lg:grid-cols-2">
-        <div>
+        <div class="reveal">
           <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">聊一聊你的项目</h2>
           <p class="mt-4 text-lg leading-relaxed text-slate-600">
             微信扫码加我，备注一句你想做什么。<br>
@@ -391,8 +426,8 @@
           </ul>
         </div>
 
-        <div class="flex justify-center lg:justify-end">
-          <figure class="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div class="reveal flex justify-center lg:justify-end" style="--reveal-delay:120ms">
+          <figure class="glow-ring relative rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-lg shadow-brand-900/5">
             <img src="assets/wechat-qr.png" width="640" height="640" alt="水哥的微信二维码，扫码添加好友"
                  class="h-56 w-56 rounded-xl" loading="lazy" decoding="async">
             <figcaption class="mt-4 max-w-[14rem] text-sm leading-relaxed text-slate-600">
@@ -407,10 +442,11 @@
 
 </main>
 
-<footer class="bg-slate-900 text-slate-400">
+<footer class="relative bg-slate-900 text-slate-400">
+  <div class="h-px bg-gradient-to-r from-transparent via-brand-500 to-transparent" aria-hidden="true"></div>
   <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 sm:flex-row sm:items-center sm:justify-between">
     <div class="flex items-center gap-2.5">
-      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">水</span>
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-600 text-sm font-bold text-white">水</span>
       <span class="font-semibold text-white">水哥 AI</span>
     </div>
     <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm" aria-label="页脚导航">
@@ -425,5 +461,6 @@
   </div>
 </footer>
 
+<script src="assets/app.js" defer></script>
 </body>
 </html>
